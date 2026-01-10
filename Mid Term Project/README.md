@@ -41,7 +41,7 @@ This project was collaboratively developed by:
 |------|------|
 | **Zoha Qayoom** | Team Leader & Developer |
 | **Omm-e-Tehreem** | Developer |
-| **Mehal Jameel** | Developer |
+| **Mehak Jameel** | Developer |
 
 ---
 
