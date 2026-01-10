@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #2d0a30;
+    
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #2b0a3d;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 39px;
+  background: linear-gradient(90deg, #2b0a3d, #2b0a3d);
+  
+  
+}
+
+/* Logo */
+.logo {
+  color: #c77dff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin-left: 320px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+  font-weight: normal;
+  margin-left: 10px;
+  
+}
+
+/* Hover color */
+.nav-links li a:hover {
+  color: #c77dff;
+}
+
+/* Dash underline effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #c77dff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* SIGN UP */
+
+.signup {
+  background: linear-gradient(90deg, #b517ff, #ff6fd8);
+  padding: 10px 24px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.signup:hover {
+  background: linear-gradient(90deg, #ff6fd8, #b517ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 111, 216, 0.4);
+}
+
+/* HAMBURGER BASE */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* SIGN IN */
+.signin {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #c77dff;
+  color: #c77dff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.signin:hover {
+  background: #c77dff;
+  color: #2b0a3d;
+  box-shadow: 0 6px 15px rgba(199, 125, 255, 0.4);
+}
+
+/* HERO SECTION */ 
+
+.grid {
+  margin: 70px;
+  display: grid;
+  grid-template-columns: 2fr 2fr; 
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out backwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.box h3{
+  color: rgb(150, 110, 235);
+  font-size: 25px;
+
+}
+
+.box h1{
+  color: white;
+  font-size: 70px;
+  margin-top: 20px;
+  
+}
+
+.box p{
+  color: rgb(161, 161, 191);
+  font-size: 30px;
+}
+
+.box button{
+    background: linear-gradient(to right, #5C0FA0FF, #EB11DDFF);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.box button:hover{
+  background: linear-gradient(to right, #EB11DDFF, #5C0FA0FF);
+  
+}
+
+
+
+/* 
+FOOTER SECTION */
+footer div.grid{
+    margin-left: 0%;
+    padding: 50px 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3b1440;
+    height: 70vh;
+    width: 100%;
+    background-image: url(/assets/picutres/footer-bg.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.one{
+    margin-top: 30px;
+    color: white;
+    
+    
+}
+
+.one input[type="email"]{
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.one button{
+    background: linear-gradient(to right, #5C0FA0FF, #EB11DDFF);
+    width: 80%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.one button:hover{
+  background: linear-gradient(to right, #EB11DDFF, #5C0FA0FF);
+  
+}
+
+.two{
+    margin-top: 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.two li{
+    font-size: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.two li:hover{
+    color: #EB11DDFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.bottom{
+    
+    
+    color: white;
+    font-size: 20px;
+    margin-left: 400px;
+    padding-bottom: 30px;
+}
+
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES - MOBILE & TABLET
+   ======================================== */
+
+/* Tablet View - 768px to 1024px */
+@media screen and (max-width: 1024px) {
+  
+  /* Navbar Adjustments */
+  .navbar {
+    padding: 20px 25px;
+  }
+  
+  .nav-links {
+    margin-left: 100px;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    font-size: 14px;
+  }
+  
+  /* Hero Section */
+  .grid {
+    margin: 40px;
+    gap: 5%;
+  }
+  
+  .box h1 {
+    font-size: 50px;
+  }
+  
+  .box h3 {
+    font-size: 20px;
+  }
+  
+  .box p {
+    font-size: 22px;
+  }
+  
+  .box button {
+    font-size: 20px;
+    padding: 12px 25px;
+  }
+  
+  /* Footer */
+  footer div.grid {
+    padding: 40px 50px;
+    height: auto;
+    gap: 5%;
+  }
+  
+  .bottom {
+    margin-left: 200px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile View - Below 768px */
+@media screen and (max-width: 768px) {
+  
+  /* Navbar Mobile */
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Show Hamburger */
+  .hamburger {
+    display: flex;
+    z-index: 1000;
+  }
+  
+  /* Hide nav links by default */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #2b0a3d;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(199, 125, 255, 0.2);
+  }
+  
+  .nav-links li a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 400px;
+  }
+  
+  /* Hamburger animation */
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+  
+  /* Nav Buttons */
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .signup, .signin {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  
+  /* Hero Section - Stack vertically */
+  .grid {
+    grid-template-columns: 1fr;
+    margin: 30px 20px;
+    gap: 30px;
+  }
+  
+  .box h3 {
+    font-size: 18px;
+  }
+  
+  .box h1 {
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  
+  .box p {
+    font-size: 18px;
+  }
+  
+  .box button {
+    font-size: 18px;
+    padding: 12px 25px;
+    margin-left: 0;
+  }
+  
+  .box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Footer - Stack in single column */
+  footer div.grid {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 30px;
+    height: auto;
+  }
+  
+  .one input[type="email"],
+  .one button {
+    width: 100%;
+  }
+  
+  .two {
+    margin-top: 20px;
+  }
+  
+  .two h1 {
+    font-size: 24px;
+  }
+  
+  .two li {
+    font-size: 16px;
+  }
+  
+  .bottom {
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+/* Extra Small Mobile - Below 480px */
+@media screen and (max-width: 480px) {
+  
+  .navbar {
+    padding: 12px 15px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .signup, .signin {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+  
+  .box h1 {
+    font-size: 32px;
+  }
+  
+  .box h3 {
+    font-size: 16px;
+  }
+  
+  .box p {
+    font-size: 16px;
+  }
+  
+  .box button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .two h1 {
+    font-size: 20px;
+  }
+  
+  .two li {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  
+  .bottom {
+    font-size: 12px;
+  }
+}

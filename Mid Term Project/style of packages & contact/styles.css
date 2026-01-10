@@ -1,0 +1,648 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #2b0a3d;
+  animation: fadeIn 1s ease-in-out backwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 39px;
+  background: linear-gradient(90deg, #2b0a3d, #2b0a3d);
+}
+
+/* Logo */
+.logo {
+  color: #c77dff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin-left: 320px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+/* Hover color */
+.nav-links li a:hover {
+  color: #c77dff;
+}
+
+/* Dash underline effect */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #c77dff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* SIGN UP */
+.signup {
+  background: linear-gradient(90deg, #b517ff, #ff6fd8);
+  padding: 10px 24px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.signup:hover {
+  background: linear-gradient(90deg, #ff6fd8, #b517ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 111, 216, 0.4);
+}
+
+/* HAMBURGER BASE */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* SIGN IN */
+.signin {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #c77dff;
+  color: #c77dff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.signin:hover {
+  background: #c77dff;
+  color: #2b0a3d;
+  box-shadow: 0 6px 15px rgba(199, 125, 255, 0.4);
+}
+
+/* RESPONSIVE - Mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(199, 125, 255, 0.2);
+  }
+
+  .nav-links li a {
+    margin-left: 0;
+    font-size: 16px;
+    color: #000 !important;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 400px;
+  }
+
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .signup,
+  .signin {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ===== SECTION BACKGROUND (IMPORTANT PART) ===== */
+.pkg-section {
+  background: linear-gradient(to bottom, #2b0a3d 0%, #2c0a3e 45%, #f6f2fa 100%);
+}
+
+/* ===== HEADER ===== */
+.pkg-header {
+  text-align: center;
+  margin-bottom: 90px;
+  display: grid;
+}
+
+.pkg-header h2 {
+  font-size: 44px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.pkg-header p {
+  max-width: 720px;
+  margin: auto;
+  color: #d8bce6;
+  font-size: 20px;
+}
+
+/* ===== CARDS LAYOUT ===== */
+.pkg-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ===== CARD ===== */
+.pkg-card {
+  background: white;
+  width: 360px;
+  padding: 45px 35px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon */
+.pkg-icon {
+  font-size: 44px;
+  margin-bottom: 15px;
+  color: #8e2de2;
+}
+
+.pkg-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #400a53;
+}
+
+/* Price */
+.pkg-price {
+  font-size: 34px;
+  color: #400a53;
+  margin-bottom: 30px;
+}
+
+.pkg-price span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* List */
+.pkg-card ul {
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.pkg-card ul li {
+  /*margin: 12px 0;*/
+  font-size: 16px;
+  color: #555;
+  font-weight: 300;
+  margin-bottom: 23px;
+}
+
+/* Buttons */
+.pkg-btn {
+  display: inline-block;
+  padding: 13px 36px;
+  border-radius: 30px;
+  border: 1px solid #c77dff;
+  color: #c77dff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pkg-btn:hover {
+  background: #c77dff;
+  color: #2b0a3d;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(199, 125, 255, 0.5);
+}
+
+/* ===== SCROLL TO TOP ===== */
+.pkg-scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #b517ff, #ff6fd8);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 48px;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(181, 23, 255, 0.6);
+}
+/* ===== CONTACT HERO ===== */
+.ct-hero {
+  background: linear-gradient(to bottom, #2a083d, #4b165c);
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.ct-hero h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* ===== CONTACT SECTION ===== */
+.ct-contact {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.ct-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+
+/* ===== FORM ===== */
+.ct-form {
+  flex: 2;
+}
+
+.ct-form h2 {
+  color: #3a0b52;
+  margin-bottom: 25px;
+}
+
+.ct-form textarea {
+  width: 100%;
+  height: 180px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  resize: both; /* bottom-right resize arrows */
+  margin-bottom: 20px;
+}
+
+.ct-row {
+  display: flex;
+  gap: 20px;
+}
+
+.ct-row input,
+.ct-form input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* ===== SEND BUTTON ===== */
+.ct-send-btn {
+  background: transparent;
+  border: 2px solid #ff7ad9;
+  padding: 14px 40px;
+  color: #ff7ad9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ct-send-btn:hover {
+  background: #ff7ad9;
+  color: #fff;
+}
+
+/* ===== INFO ===== */
+.ct-info {
+  flex: 1;
+  color: #555;
+}
+
+.ct-info p {
+  margin-bottom: 30px;
+}
+
+/* ===== SCROLL TOP ===== */
+.ct-scroll-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #ff7ad9;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.one input[type="email"] {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+/* ===== GLOBAL RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .pkg-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .pkg-section {
+    padding: 100px 20px;
+  }
+
+  .pkg-header h2 {
+    font-size: 36px;
+  }
+
+  .pkg-header p {
+    font-size: 18px;
+  }
+
+  .pkg-card {
+    width: 280px;
+    padding: 35px 25px;
+  }
+
+  .pkg-card h3 {
+    font-size: 20px;
+  }
+
+  .pkg-price {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pkg-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .ct-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ct-form,
+  .ct-info {
+    width: 100%;
+  }
+
+  .ct-row {
+    flex-direction: column;
+  }
+
+  .ct-form textarea {
+    height: 150px;
+  }
+
+  .ct-hero h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .pkg-header h2 {
+    font-size: 28px;
+  }
+
+  .pkg-header p {
+    font-size: 16px;
+  }
+
+  .pkg-card h3 {
+    font-size: 18px;
+  }
+
+  .pkg-price {
+    font-size: 24px;
+  }
+
+  .ct-hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* FOOTER STYLING */
+footer div.grid {
+  margin-left: 0%;
+  padding: 50px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3b1440;
+  height: 70vh;
+  width: 100%;
+  background-image: url(/assets/picutres/footer-bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.one {
+  margin-top: 30px;
+  color: white;
+}
+
+.one input[type="email"] {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+.one button {
+  background: linear-gradient(to right, #5c0fa0ff, #eb11ddff);
+  width: 80%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.one button:hover {
+  background: linear-gradient(to right, #eb11ddff, #5c0fa0ff);
+}
+
+.two {
+  margin-top: 30px;
+  color: white;
+  line-height: 40px;
+}
+
+.two li {
+  font-size: 20px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.two li:hover {
+  color: #eb11ddff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bottom {
+  color: gray;
+  font-size: 20px;
+  margin-left: 400px;
+  padding-bottom: 30px;
+}
+
+/* FOOTER RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  footer div.grid {
+    padding: 40px 50px;
+    height: auto;
+    gap: 5%;
+  }
+
+  .bottom {
+    margin-left: 200px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer div.grid {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 30px;
+    height: auto;
+  }
+
+  .one input[type="email"],
+  .one button {
+    width: 100%;
+  }
+
+  .two {
+    margin-top: 20px;
+  }
+
+  .two h1 {
+    font-size: 24px;
+  }
+
+  .two li {
+    font-size: 16px;
+  }
+
+  .bottom {
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .two h1 {
+    font-size: 20px;
+  }
+
+  .two li {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .bottom {
+    font-size: 12px;
+  }
+}
